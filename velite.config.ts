@@ -1,5 +1,7 @@
 import { defineConfig, defineCollection, s } from "velite"
-
+import rehypeSlug from "rehype-slug"
+import rehypePrettyCode from "rehype-pretty-code"
+import rehypeAutolinkHeadings from "rehype-autolink-headings"
 
 // allows you to read any data from collection, and ADD a field based some 
 // transformation of our data (can't obviously do it from the collection definition)
@@ -33,7 +35,10 @@ export default defineConfig({
     },
     collections: { posts },
     mdx: {
-        rehypePlugins: [],
+        rehypePlugins: [rehypeSlug, 
+            [rehypePrettyCode, {theme: "github-dark"}], 
+            [rehypeAutolinkHeadings, { behavior: "wrap", properties: { className: ["subheading-anchor"], ariaLabel: "Link to section"} }],
+        ],
         remarkPlugins: []
     }
 })
