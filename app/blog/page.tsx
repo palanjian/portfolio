@@ -3,6 +3,12 @@ import { PostItem } from "@/components/post-item"
 import { QueryPagination } from "@/components/query-pagination"
 import { sortPosts } from "@/lib/utils"
 import "@/styles/mdx.css"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "Blog",
+    description: "A description of my blog."
+}
 
 const POSTS_PER_PAGE = 10 // CONST FOR PAGINATION
 

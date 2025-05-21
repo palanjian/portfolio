@@ -5,6 +5,7 @@ export const siteConfig = {
     url: "https://palanjian.com",
     description: "Peter Palanjian's personal website and blog",
     author: "Peter Palanjian",
+    email: "testemail@gmail.com",
     links: {
         twitter: "https://www.twitter.com/test",
         github: "https://www.github.com/palanjian",
